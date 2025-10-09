@@ -1793,10 +1793,10 @@ def ping_all():
             return value
         return {key: update_value(value) for key, value in input_dict.items()}
 # این تابع در فایل cl.py شما وجود دارد، آن را با این نسخه جایگزین کنید
-
 def process_ping(i:str, t,counter=2) :
     global FIN_CONF
-    print(f"  [Thread-{t}] Starting to process: {i.strip()[:50]}...") # لاگ اولیه برای هر کانفیگ
+    config_short = i.strip()[:60]
+    print(f"[Thread-{t}]  ▶️  شروع پردازش: {config_short}...")
     
     while t > 100:
         t-=100
@@ -1804,7 +1804,6 @@ def process_ping(i:str, t,counter=2) :
     hy2_path_test_file=f"hy2/config{'' if t==0 else str(t)}.yaml"
     result="-1"
     is_wrong = False
-    
     with open(path_test_file, "w") as f:
         try:
             if not is_dict:
@@ -1813,37 +1812,27 @@ def process_ping(i:str, t,counter=2) :
                 json.dump(update_ip_addresses(i, t+2), f)
         except Exception as E:
             is_wrong = True
-            print(f"  [Thread-{t}] ERROR creating config file: {E}")
-            
+            print(f"[Thread-{t}]  ❌  خطا در ساخت فایل کانفیگ برای {config_short}: {E}")
+
     if not is_wrong:
         with open(path_test_file, "r") as f:
             temp3 = json.load(f)
         port = temp3["inbounds"][1]["port"]
-        
         if not is_dict:
             if i.startswith("hy2://") or i.startswith("hysteria2://"):
                 th3h = threading.Thread(target=s_hy2,args=(hy2_path_test_file,t,))
                 th3h.start()
-                
         th3 = threading.Thread(target=s_xray,args=(path_test_file,t,))
         th3.start()
-        
-        print(f"  [Thread-{t}] Xray/Hysteria process started. Waiting for 3 seconds...")
         time.sleep(3)
-        
-        if os.path.exists(path_test_file):
-            os.remove(path_test_file)
-        if os.path.exists(hy2_path_test_file):
-            os.remove(hy2_path_test_file)
+        if os.path.exists(path_test_file): os.remove(path_test_file)
+        if os.path.exists(hy2_path_test_file): os.remove(hy2_path_test_file)
             
-        proxies = {"http": f"http://127.0.0.{t+2}:{port}",
-                        "https": f"http://127.0.0.{t+2}:{port}"}
+        proxies = {"http": f"http://127.0.0.{t+2}:{port}", "https": f"http://127.0.0.{t+2}:{port}"}
         
         @retry(stop_max_attempt_number=3, wait_fixed=500, retry_on_exception=lambda x: isinstance(x, Exception))
         def pingg():
             try:
-                # لاگ قبل از پینگ
-                print(f"    [Thread-{t}] Attempting to ping via proxy...")
                 url = test_link_
                 headers = {"Connection": "close"}
                 start = time.time()
@@ -1851,49 +1840,46 @@ def process_ping(i:str, t,counter=2) :
                 elapsed = (time.time() - start) * 1000
                 if response.status_code == 204 or (response.status_code == 200 and len(response.content) == 0):
                     return f"{int(elapsed)}"
-                else:
-                    if response.status_code == 503:
-                        raise IOError("Connection test error, check your connection or ping again ...")
-                    else:
-                        raise IOError(f"Connection test error, status code: {response.status_code}")
-            except RequestException as e:
-                print(f"    [Thread-{t}] Ping RequestException: {e}")
-                return "-1"
+                raise IOError(f"Status code: {response.status_code}")
             except Exception as e:
-                print(f"    [Thread-{t}] Ping Exception: {e}")
+                # این تابع داخلی است، پس لاگ زیادی نمی‌خواهیم
                 return "-1"
         try:
             result = pingg()
         except Exception:
             result = "-1"
             
-        if result !="-1":
-            if CHECK_LOC:
-                print(f"  [Thread-{t}] Ping successful ({result}ms). Getting public IP...")
+        # --- بخش تصمیم‌گیری با لاگ‌های جدید ---
+        if result != "-1":
+            print(f"[Thread-{t}]  ✅  پینگ موفق ({result}ms) برای {config_short}")
+            passes_iran_check = False
+            if CHECK_IRAN:
                 public_ip = get_public_ipv4(t+2, port)
-                if CHECK_IRAN:
-                    print(f"  [Thread-{t}] Public IP is {public_ip}. Checking accessibility from Iran...")
-                    if is_ip_accessible_from_iran_via_check_host(public_ip,proxies):
-                        print(f"  [Thread-{t}] IP {public_ip} is accessible. Getting details...")
-                        get_ip_details(public_ip,i,proxies)
+                if public_ip and is_ip_accessible_from_iran_via_check_host(public_ip, proxies):
+                    passes_iran_check = True
                 else:
-                    get_ip_details(public_ip,i,proxies)
+                    print(f"[Thread-{t}]  ❌  رد شد: تست فیلتر ایران ناموفق بود.")
             else:
-                if CHECK_IRAN:
-                    print(f"  [Thread-{t}] Ping successful ({result}ms). Getting public IP for Iran check...")
+                # اگر چک ایران غیرفعال باشد، این مرحله را موفق در نظر می‌گیریم
+                passes_iran_check = True
+            
+            if passes_iran_check:
+                if CHECK_LOC:
                     public_ip = get_public_ipv4(t+2, port)
-                    print(f"  [Thread-{t}] Public IP is {public_ip}. Checking accessibility from Iran...")
-                    if is_ip_accessible_from_iran_via_check_host(public_ip,proxies):
-                        FIN_CONF.append(i)
+                    get_ip_details(public_ip, i, proxies) # get_ip_details خودش به FIN_CONF اضافه می‌کند
+                    print(f"[Thread-{t}]  ✔️  پذیرفته شد: کانفیگ به لیست نهایی اضافه شد (با موقعیت).")
                 else:
                     FIN_CONF.append(i)
-                    
-    print(f"  [Thread-{t}] Finished processing. Cleaning up processes...")
+                    print(f"[Thread-{t}]  ✔️  پذیرفته شد: کانفیگ به لیست نهایی اضافه شد (بدون موقعیت).")
+        else:
+            print(f"[Thread-{t}]  ❌  رد شد: پینگ ناموفق بود.")
+    
+    # --- پایان بخش تصمیم‌گیری ---
+
     if not is_dict:
         if i.startswith("hy2://") or i.startswith("hysteria2://"):
             process_manager.stop_process(f"hysteria_{t}")
     process_manager.stop_process(f"xray_{t}")
-
 # ==============================================================================
 # بخش جدید برای پیش‌پردازش، تست و ذخیره‌سازی فایل‌ها
 # ==============================================================================
@@ -2104,6 +2090,7 @@ if __name__ == "__main__":
     process_manager.stop_all()
     print("All tasks finished successfully.")
     sys.exit()
+
 
 
 
