@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          # تغییر به نسخه پایدار 3.12 برای جلوگیری از خطای پیدا نشدن نسخه
+          # استفاده از نسخه پایدار 3.12
           python-version: '3.12'
 
       - name: Install Python dependencies
@@ -30,7 +30,7 @@ jobs:
 
       - name: Clean up old results before run
         run: |
-          rm -f final.txt final_b64.txt vless*.txt vmess*.txt trojan*.txt ss*.txt hy2*.txt wireguard*.txt socks*.txt
+          rm -f final.txt final_b64.txt vless*.txt vmess*.txt trojan*.txt ss*.txt hy2*.txt wireguard*.txt socks*.txt tuic*.txt ssr*.txt
           rm -rf loc/
 
       - name: Set execute permissions for binaries
@@ -46,8 +46,10 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          # رفع خطای اصلی: فقط فایل‌های نتیجه به کامیت اضافه می‌شوند
-          git add final.txt final_b64.txt vless*.txt vmess*.txt trojan*.txt ss*.txt hy2*.txt wireguard*.txt socks*.txt loc/
+          # راه حل نهایی: همه تغییرات را اضافه کن...
+          git add .
+          # ... سپس پوشه گردش کار را از لیست تغییرات حذف کن تا خطای دسترسی رخ ندهد
+          git reset -- .github/
           
           if ! git diff --staged --quiet; then
             echo "Changes detected. Committing and pushing..."
