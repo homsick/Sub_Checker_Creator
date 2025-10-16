@@ -4,4 +4,5 @@
 
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTozNjBlMjFkMjE5NzdkYzEx@151.244.111.50:57456#hamedp71%3A%3A%F0%9F%87%B5%F0%9F%87%B1
 vless://be015dd2-30b4-4fcf-a9ee-080c13ac13fb@2.56.125.209:49868?security=reality&encryption=none&pbk=joEKL4Itljxodt1SOe1itSMrAH9bk_udpPtXgIjdu10&headerType=none&fp=chrome&type=tcp&sni=yahoo.com&sid=6d638e#hamedp71%3A%3A%F0%9F%87%B5%F0%9F%87%B1
-vless://30dd2eea-fe78-4660-a04f-096a7dac41e3@tiktok.ducks.tel:443?security=reality&encryption=none&pbk=IarU4xicX8qiVO5nqzeHc6MK9A_Vw9YaAtnPHB4DswU&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=mirror.yandex.ru&sid=916a#hamedp71%3A%3A%F0%9F%87%B5%F0%9F%87%B1
+vless://ce5c055f-fc10-4720-a374-72f907e61f23@www.rexo.online:37173?path=%2Fws&security=&encryption=none&host=iranserver.com&type=ws#hamedp71%3A%3A%F0%9F%87%B5%F0%9F%87%B1
+vless://760bc619-3c27-4521-8d66-1838d96bf44f@www.rexo.online:49796?type=grpc&encryption=none&serviceName=rexo.rexo.online&authority=rexo.rexo.online&security=none#hamedp71%3A%3A%F0%9F%87%B5%F0%9F%87%B1
