@@ -37,7 +37,13 @@ FIN_CONF=[]
 CHECK_LOC=True
 CHECK_IRAN=False
 CHECK_HOST_IRANIAN_NODES = [
-    "ir3.node.check-host.net",  # Tehran, Rightel
+    "ir1.node.check-host.net",  # Pars Online (پارس آنلاین)
+    "ir3.node.check-host.net",  # Derak Cloud (قبلاً رایتل بود - شیراز)
+    "ir4.node.check-host.net",  # GreenWeb (گرین‌وب - مشهد) #"ir2.node.check-host.net",  # TCI / Webdade (مخابرات)
+    "ir5.node.check-host.net",  # Afranet / Web Dadeh (افرانت)
+    "ir6.node.check-host.net",  # Hamed Shirvani (معمولاً سمت همراه اول/MCI دیده می‌شود - تبریز)
+    "ir7.node.check-host.net",  # Pishgaman / Mahan Cloud (پیشگامان)
+    "ir8.node.check-host.net",  # Respina / Pasargad (رسپینا)
 ]
 def remove_empty_strings(input_list):
     return [item for item in input_list if item and item != "\n" ]
@@ -2089,6 +2095,7 @@ if __name__ == "__main__":
     process_manager.stop_all()
     print("All tasks finished successfully.")
     sys.exit()
+
 
 
 
