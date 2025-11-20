@@ -4,3 +4,4 @@
 
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@195.181.160.6:990#hamedp71%3A%3A%F0%9F%87%A8%F0%9F%87%BF
 trojan://f583143c-2cbe-47f5-804d-27efa55442a1@81.91.214.162:443?path=%2FFree-VPN-CF-Geo-Project%2F81.91.214.162%3D443&security=tls&host=joss.gpj1.web.id&fp=randomized&type=ws&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%A8%F0%9F%87%BF
+trojan://f583143c-2cbe-47f5-804d-27efa55442a1@81.91.214.162:443?type=ws&host=joss.gpj1.web.id&path=%2FFree-VPN-CF-Geo-Project%2F81.91.214.162%3D443&security=tls&fp=randomized&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%A8%F0%9F%87%BF
