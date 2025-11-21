@@ -4,10 +4,14 @@
 
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp1REhQN2N6b0ZBQThMWG56U1A5VzJN@62.210.88.22:443#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
 ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTo5NVRHQUpiZDNmeVJNcWczeXB2ZU8z@62.210.88.22:443#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb@34.22.190.30:443?allowInsecure=0&sni=joss.gpj1.web.id&type=ws&host=joss.gpj1.web.id&path=/Free-VPN-CF-Geo-Project/34.22.190.30=443#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098@51.15.210.1:443?allowInsecure=0&sni=joss.gpj1.web.id&type=ws&host=joss.gpj1.web.id&path=/Free-VPN-CF-Geo-Project/51.15.210.1=443#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
 trojan://e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098@51.15.210.1:443?path=%2FFree-VPN-CF-Geo-Project%2F51.15.210.1%3D443&security=tls&host=joss.gpj1.web.id&fp=randomized&type=ws&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
 trojan://fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb@34.22.190.30:443?path=%2FFree-VPN-CF-Geo-Project%2F34.22.190.30%3D443&security=tls&host=joss.gpj1.web.id&fp=randomized&type=ws&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
-trojan://e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098@51.15.210.1:443?allowInsecure=0&sni=joss.gpj1.web.id&type=ws&host=joss.gpj1.web.id&path=/Free-VPN-CF-Geo-Project/51.15.210.1=443#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
-trojan://fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb@34.22.190.30:443?allowInsecure=0&sni=joss.gpj1.web.id&type=ws&host=joss.gpj1.web.id&path=/Free-VPN-CF-Geo-Project/34.22.190.30=443#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://0a477acf-1f95-47cb-b4a5-a627b4c57de3@34.22.190.30:443?path=%2FFree-VPN-CF-Geo-Project%2F34.22.190.30%3D443&security=tls&host=joss.gpj1.web.id&fp=randomized&type=ws&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://0e0c9c2a-6166-4337-bdfc-675602365807@141.94.204.212:2053?path=%2FFree-VPN-CF-Geo-Project%2F141.94.204.212%3D2053&security=tls&host=joss.gpj1.web.id&fp=randomized&type=ws&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://be94cd60-8e91-4cd6-9c53-26ee1314edfd@178.33.161.196:2053?path=%2FFree-VPN-CF-Geo-Project%2F178.33.161.196%3D2053&security=tls&host=joss.gpj1.web.id&fp=randomized&type=ws&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://5fbEkKmVOdAY+8_-@217.69.10.156:16288/?type=tcp&security=tls&sni=sweetdream.sweetthunder.click&allowInsecure=1#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
 trojan://5fbEkKmVOdAY+8_-@217.69.10.156:16288/?type=tcp&security=tls&sni=sweetdream.sweetthunder.click#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
 trojan://fea8b7a7-cc83-4a78-a3fc-bbce9cc89ddb@34.22.190.30:443?type=ws&host=joss.gpj1.web.id&path=%2FFree-VPN-CF-Geo-Project%2F34.22.190.30%3D443&security=tls&fp=randomized&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
 trojan://e6f0e8b0-3dc5-4d53-a23a-86c02d5ba098@51.15.210.1:443?type=ws&host=joss.gpj1.web.id&path=%2FFree-VPN-CF-Geo-Project%2F51.15.210.1%3D443&security=tls&fp=randomized&sni=joss.gpj1.web.id#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
