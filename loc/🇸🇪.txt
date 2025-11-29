@@ -2,6 +2,4 @@
 //profile-update-interval: 1
 //subscription-userinfo: upload=0; download=76235908096; total=1486058684416; expire=1767212999
 
-trojan://c86e076b-b228-44ad-a4fd-ac91e3c2bc8d@185.128.106.12:443?path=%2FFree-VPN-CF-Geo-Project%2F185.128.106.12%3D443&security=tls&host=joss.gpj.web.id&fp=randomized&type=ws&sni=joss.gpj.web.id#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AA
 trojan://BaeSzHdfJIR13l67@70.34.218.149:11930/?type=tcp&security=tls&sni=softpillow.silentrocket.click#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AA
-trojan://c86e076b-b228-44ad-a4fd-ac91e3c2bc8d@185.128.106.12:443?type=ws&host=joss.gpj.web.id&path=%2FFree-VPN-CF-Geo-Project%2F185.128.106.12%3D443&security=tls&fp=chrome&sni=joss.gpj.web.id#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AA
