@@ -3,4 +3,3 @@
 //subscription-userinfo: upload=0; download=76235908096; total=1486058684416; expire=1767212999
 
 trojan://BaeSzHdfJIR13l67@70.34.218.149:11930?security=tls&sni=softpillow.silentrocket.click#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AA
-vless://bf92bdef-ab8d-4481-8798-2d39023357b2@fin.intfreed.ru:443?security=reality&encryption=none&pbk=JxwG7rAbNCd_C82p9K69AZDWh51fri2nm3wLHHrfyiw&headerType=none&fp=qq&type=tcp&flow=xtls-rprx-vision&sni=video.intfreed.ru&sid=7755e972daf8eec8#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AA
